@@ -64,10 +64,10 @@ func (scanner *Scanner) Scan() (*analyzer.FindingResult, error) {
 			Location: &analyzer.FindingLocation{
 				Path:        secret.File,
 				Snippet:     secret.Match,
-				StartLine:   analyzer.Ptr(secret.StartLine),
-				EndLine:     analyzer.Ptr(secret.EndLine),
-				StartColumn: analyzer.Ptr(secret.StartColumn),
-				EndColumn:   analyzer.Ptr(secret.EndColumn),
+				StartLine:   secret.StartLine,
+				EndLine:     secret.EndLine,
+				StartColumn: secret.StartColumn,
+				EndColumn:   secret.EndColumn,
 			},
 			Metadata: nil,
 		})
