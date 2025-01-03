@@ -1,3 +1,4 @@
 .idea
 gitleaks.json
+!testdata/gitleaks.json
 finding_results.json

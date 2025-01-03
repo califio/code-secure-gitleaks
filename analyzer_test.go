@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gitlab.com/code-secure/analyzer"
+	"github.com/califio/code-secure-analyzer"
 	"gitleaks/gitleaks"
 	"os"
 	"testing"

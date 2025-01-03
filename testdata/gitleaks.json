@@ -1,0 +1,42 @@
+[
+  {
+    "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+    "StartLine": 1,
+    "EndLine": 1,
+    "StartColumn": 4,
+    "EndColumn": 76,
+    "Match": "ar.projectKey=test-cicd_f13c7da2-f90f-44bb-827c-bb8395f1162a",
+    "Secret": "test-cicd_f13c7da2-f90f-44bb-827c-bb8395f1162a",
+    "File": "sonar-project.properties",
+    "SymlinkFile": "",
+    "Commit": "",
+    "Entropy": 4.6094327,
+    "Author": "",
+    "Email": "",
+    "Date": "",
+    "Message": "",
+    "Tags": [],
+    "RuleID": "generic-api-key",
+    "Fingerprint": "sonar-project.properties:generic-api-key:1"
+  },
+  {
+    "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+    "StartLine": 9,
+    "EndLine": 9,
+    "StartColumn": 2,
+    "EndColumn": 55,
+    "Match": "api_token = \"a9ce30949ab3ee868038db019d5194580cfe6f14\"",
+    "Secret": "a9ce30949ab3ee868038db019d5194580cfe6f14",
+    "File": "jira.py",
+    "SymlinkFile": "",
+    "Commit": "",
+    "Entropy": 3.6848295,
+    "Author": "",
+    "Email": "",
+    "Date": "",
+    "Message": "",
+    "Tags": [],
+    "RuleID": "generic-api-key",
+    "Fingerprint": "jira.py:generic-api-key:9"
+  }
+]
