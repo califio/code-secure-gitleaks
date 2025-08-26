@@ -23,7 +23,7 @@ func (scanner *Scanner) Name() string {
 	return "gitleaks"
 }
 
-func (scanner *Scanner) Scan() (*analyzer.FindingResult, error) {
+func (scanner *Scanner) Scan(option analyzer.ScanOption) (*analyzer.SastResult, error) {
 	args := []string{
 		"dir", scanner.ProjectPath,
 		"--ignore-gitleaks-allow",
@@ -51,9 +51,9 @@ func (scanner *Scanner) Scan() (*analyzer.FindingResult, error) {
 	if err != nil {
 		return nil, err
 	}
-	var result analyzer.FindingResult
+	var result analyzer.SastResult
 	for _, secret := range secrets {
-		result.Findings = append(result.Findings, analyzer.Finding{
+		result.Findings = append(result.Findings, analyzer.SastFinding{
 			RuleID:         secret.RuleID,
 			Identity:       secret.Fingerprint,
 			Name:           fmt.Sprintf("Secret detected at %s:%d", secret.File, secret.StartLine),

@@ -12,11 +12,12 @@ type RunCmd struct {
 }
 
 func (r *RunCmd) Run() error {
-	secretAnalyzer := analyzer.NewFindingAnalyzer()
-	// register scanner
-	secretAnalyzer.RegisterScanner(&gitleaks.Scanner{
-		Output:      r.Output,
+	secretAnalyzer := analyzer.NewSastAnalyzer(analyzer.SastAnalyzerOption{
 		ProjectPath: r.ProjectPath,
+		Scanner: &gitleaks.Scanner{
+			Output:      r.Output,
+			ProjectPath: r.ProjectPath,
+		},
 	})
 	secretAnalyzer.Run()
 	return nil
