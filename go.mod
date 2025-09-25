@@ -4,7 +4,7 @@ go 1.23.4
 
 require (
 	github.com/alecthomas/kong v1.5.1
-	github.com/califio/code-secure-analyzer v1.0.4
+	github.com/califio/code-secure-analyzer v1.0.5
 )
 
 require (
